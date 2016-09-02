@@ -1,7 +1,5 @@
 # vue-time-tracker
 
-> A Vue.js project
-
 ## Build Setup
 
 ``` bash
