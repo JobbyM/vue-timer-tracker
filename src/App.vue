@@ -14,7 +14,7 @@
     </nav>
     <div class="container">
       <div class="col-sm-3">
-
+        <sidebar :time="totalTime"></sidebar>
       </div>
       <div class="col-sm-9">
         <router-view></router-view>
@@ -22,3 +22,26 @@
     </div>
   </div>
 </template>
+
+<script>
+  import Sidebar from './components/Sidebar.vue'
+
+  export default {
+    components: {
+      'sidebar': Sidebar
+    },
+    data () {
+      return {
+        totalTime: 1.5
+      }
+    },
+    events: {
+      timeUpdate (timeEntry) {
+        this.totalTime += parseFloat(timeEntry.totalTime)
+      },
+      deleteTime (timeEntry) {
+        this.totalTime -= parseFloat(timeEntry.totalTime)
+      }
+    }
+  }
+</script>
