@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import Hello from './components/Hello.vue'
+import Home from './components/Home.vue'
 
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
@@ -13,13 +13,13 @@ const router = new VueRouter()
 
 // 路由map
 router.map({
-	'/hello':{
-		components: Hello
+	'/Home':{
+		component: Home
 	}
 })
 
 router.redirect({
-	'*': '/hello'
+	'*': '/Home'
 })
 
 router.start(App, '#app')
