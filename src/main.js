@@ -7,6 +7,10 @@ import LogTime from './components/LogTime.vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
+import 'jquery'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap'
+
 // 注册两个组件
 Vue.use(VueResource)
 Vue.use(VueRouter)
