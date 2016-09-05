@@ -32,10 +32,10 @@
 							<!-- `:src` 实行，这个是vue 的属性绑定简写`v-bind` 可以缩写为`:`
 							比如a 标签的`href` 可以写为`:href` 并且在vue 的指令里就一定不要写
 							插值表达式了（`:src={{xxx}}`）,vue自己会解析 -->
-							<img :src="timeEntry.user.image" class="avatar img-circle img-responsive">
+							<img src="https://avatars1.githubusercontent.com/u/10184444?v=3&s=460" class="avatar img-circle img-responsive">
 							<p class="text-center">
 								<strong>
-									{{ timeEntry.user.name }}
+									令狐冲
 								</strong>
 							</p>
 						</div>
@@ -75,16 +75,16 @@
 	export default {
 		data () {
 			// 事先模拟一个数据
-			let existingEntry = {
-				user: {
-					name: '令狐冲',
-					email: 'linghuchong@xiaoaojianghu.com',
-					image: 'https://sfault-avatar.b0.upaiyun.com/888/223/888223038-5646dbc28d530_huge256'
-				},
-				comment: '我的一个备注',
-				totalTime: 1.5,
-				date: '2016-09-01'
-			}
+			// let existingEntry = {
+			// 	user: {
+			// 		name: '令狐冲',
+			// 		email: 'linghuchong@xiaoaojianghu.com',
+			// 		image: 'https://sfault-avatar.b0.upaiyun.com/888/223/888223038-5646dbc28d530_huge256'
+			// 	},
+			// 	comment: '我的一个备注',
+			// 	totalTime: 1.5,
+			// 	date: '2016-09-01'
+			// }
 
 			return {
 				timeEntries: [existingEntry]

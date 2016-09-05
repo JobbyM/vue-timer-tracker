@@ -43,11 +43,11 @@
 			return {
 				// 模拟一个数据
 				timeEntry : {
-					user: {
-						name: '令狐冲',
-						email: 'linghuchong@xiaoaojianghu.com',
-						image: 'https://sfault-avatar.b0.upaiyun.com/888/223/888223038-5646dbc28d530_huge256'
-					}
+					// user: {
+					// 	name: '令狐冲',
+					// 	email: 'linghuchong@xiaoaojianghu.com',
+					// 	image: 'https://sfault-avatar.b0.upaiyun.com/888/223/888223038-5646dbc28d530_huge256'
+					// }
 				}
 			}
 		},
