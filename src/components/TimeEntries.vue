@@ -73,6 +73,17 @@
 
 <script>
 	export default {
+		route : {
+			data () {
+				this.$http.get('http://localhost:8888/time-entries')
+					.then(function(ret){
+						this.timeEntries = ret.data
+					})
+					.then(function(err){
+						console.log(err)
+					})
+			}
+		},
 		data () {
 			// 事先模拟一个数据
 			// let existingEntry = {
@@ -87,14 +98,22 @@
 			// }
 
 			return {
-				timeEntries: [existingEntry]
+				timeEntries: []
 			}
 		},
 		methods: {
 			deleteTimeEntry (timeEntry) {
 				// 这个方法用于删除某一项计划
 				let index = this.timeEntries.indexOf(timeEntry)
+				let _id = this.timeEntries[index]._id
 				if(window.confirm('确定要删除吗？')){
+					this.$http.delete('http://localhost:8888/delete/' + _id)
+						.then(function(ret){
+							console.log(ret)
+						})
+						.then(function(err){
+							console.log(err)
+						})
 					this.timeEntries.splice(index, 1)
 					// 这里会派发到父组件上，执行父组件events 里的deleteTime 方法
 					this.$dispatch('deleteTime', timeEntry)

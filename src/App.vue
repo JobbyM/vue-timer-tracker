@@ -30,6 +30,15 @@
     components: {
       'sidebar': Sidebar
     },
+    ready () {
+      this.$http.get('http://localhost:8888/time')
+        .then(function(ret){
+          this.totalTime = ret.data.time;
+        })
+        .then(function(err){
+          console.error(err)
+        })
+    },
     data () {
       return {
         totalTime: 1.5
